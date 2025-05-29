@@ -17,7 +17,7 @@ print("ask the question about the document \n")
 while True:
     user_query=input("you:").strip()
     if user_query.lower() in ("exit", "quit"):
-        print("👋 Exiting chat.")
+        print("Exiting chat.")
         break
     top_chunks = vs.query(user_query, k=3)
     context = "\n\n".join([c["chunk"] for c in top_chunks])
